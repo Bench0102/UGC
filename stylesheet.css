@@ -9,6 +9,7 @@ body {
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 /* Navbar Styles */
@@ -229,13 +230,7 @@ body {
     align-items: center;
 }
 
-.hero-image img {
-    width: 350px;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 0;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
+
 
 .hero-contact {
     display: flex;
@@ -413,12 +408,7 @@ body {
     transform: rotate(-3deg) scale(1.05);
 }
 
-.about-polaroid img {
-    width: 100%;
-    height: 650px;
-    object-fit: cover;
-    border-radius: 8px;
-}
+
 
 .about-quote {
     font-family: 'Georgia', serif;
@@ -468,12 +458,7 @@ body {
     aspect-ratio: 1;
 }
 
-.about-image-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
+
 
 .about-image-item:hover img {
     transform: scale(1.05);
@@ -505,13 +490,9 @@ body {
     text-align: center;
 }
 
-.about-image img {
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
 
-/* Services Section */
+
+/* Services Section - Fixed */
 .services-new {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     padding: 4rem 0;
@@ -519,8 +500,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     position: relative;
+    overflow-x: hidden;
 }
 
 .services-new::before {
@@ -562,9 +545,11 @@ body {
 
 .services-content {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 5rem;
-    padding: 0 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
     flex: 1;
     align-items: start;
     position: relative;
@@ -591,28 +576,14 @@ body {
     background-clip: text;
 }
 
-.services-image-container {
-    position: relative;
-    width: 100%;
-    height: 450px;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-    transform: perspective(1000px) rotateY(-5deg);
-    transition: all 0.4s ease;
-}
+
 
 .services-image-container:hover {
     transform: perspective(1000px) rotateY(0deg) scale(1.02);
     box-shadow: 0 25px 80px rgba(0,0,0,0.25);
 }
 
-.services-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
+
 
 .services-image-container:hover img {
     transform: scale(1.05);
@@ -688,22 +659,23 @@ body {
 }
 
 .services-right {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
     padding-top: 1rem;
 }
 
 .services-category {
     background: rgba(255,255,255,0.9);
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     border: 1px solid rgba(255,255,255,0.2);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    height: fit-content;
 }
 
 .services-category::before {
@@ -734,11 +706,11 @@ body {
 
 .services-category-title {
     font-family: 'Inter', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 800;
     color: #212529;
-    margin-bottom: 1.5rem;
-    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
     position: relative;
 }
 
@@ -761,14 +733,14 @@ body {
 
 .services-list li {
     font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 500;
     color: #495057;
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
     position: relative;
-    letter-spacing: 0.5px;
-    line-height: 1.6;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
     transition: all 0.3s ease;
 }
 
@@ -911,25 +883,13 @@ body {
     text-align: left;
 }
 
-.portfolio-image-container {
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
+
 
 .portfolio-image-container:hover {
     transform: translateY(-5px);
 }
 
-.portfolio-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
+
 
 .portfolio-image-container:hover img {
     transform: scale(1.05);
@@ -1031,14 +991,7 @@ body {
     align-items: center;
 }
 
-.testimonial-polaroid {
-    background: white;
-    padding: 20px;
-    transform: rotate(-3deg);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    max-width: 350px;
-    transition: transform 0.3s ease;
-}
+
 
 .testimonial-polaroid:nth-child(2) {
     transform: rotate(3deg);
@@ -1058,18 +1011,9 @@ body {
     flex-direction: column;
 }
 
-.polaroid-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
 
-.polaroid-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
+
 
 .polaroid-caption {
     text-align: center;
@@ -1198,20 +1142,9 @@ body {
     text-align: center;
 }
 
-.goals-new-image {
-    width: 300px;
-    height: 450px;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-}
 
-.goals-new-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
+
 
 .goals-new-right {
     padding: 60px 40px;
@@ -1650,18 +1583,9 @@ body {
     letter-spacing: 0.5px;
 }
 
-.success-small-image {
-    width: 200px;
-    height: 250px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
 
-.success-small-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
+
 
 .success-title {
     font-size: 5rem;
@@ -1693,19 +1617,9 @@ body {
     margin-bottom: 2rem;
 }
 
-.success-main-image {
-    width: 400px;
-    height: 300px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    border-radius: 10px;
-}
 
-.success-main-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
+
 
 .success-contact {
     display: flex;
@@ -1790,24 +1704,13 @@ body {
     margin: 0;
 }
 
-.strategies-polaroid {
-    background: white;
-    padding: 20px 20px 60px 20px;
-    transform: rotate(-3deg);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    max-width: 300px;
-    transition: transform 0.3s ease;
-}
+
 
 .strategies-polaroid:hover {
     transform: rotate(-1deg) scale(1.02);
 }
 
-.strategies-polaroid img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
+
 
 .strategies-right {
     display: flex;
@@ -1907,19 +1810,9 @@ body {
     text-align: left;
 }
 
-.why-content-image {
-    width: 250px;
-    height: 300px;
-    overflow: hidden;
-    margin: 2rem 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
 
-.why-content-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
+
 
 .why-list-intro {
     font-family: 'Playfair Display', 'Georgia', serif;
@@ -2006,25 +1899,13 @@ body {
     margin-left: 0;
 }
 
-.why-polaroid {
-    background: white;
-    padding: 15px 15px 45px 15px;
-    transform: rotate(3deg);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    max-width: 250px;
-    margin: 2rem auto;
-    transition: transform 0.3s ease;
-}
+
 
 .why-polaroid:hover {
     transform: rotate(1deg) scale(1.02);
 }
 
-.why-polaroid img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-}
+
 
 .why-contact-info {
     margin: 1rem 0;
@@ -2052,7 +1933,300 @@ body {
     text-align: center;
 }
 
+/* Global Image Responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hero Section Image */
+.hero-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    min-height: 450px;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section Images */
+.about-polaroid img {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-image-item img {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Services Section Images */
+.services-image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: all 0.4s ease;
+}
+
+.services-image-container img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Portfolio Section Images */
+.portfolio-image-container {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.portfolio-image-container img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Goals Section Images */
+.goals-new-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    min-height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.goals-new-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+}
+
+/* Polaroid Images */
+.polaroid-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    margin: 0 auto;
+}
+
+.polaroid-image img {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    object-fit: cover;
+}
+
+/* Success Stories Images */
+.success-small-image {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.success-small-image img {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    object-fit: cover;
+}
+
+.success-main-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    min-height: 250px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.success-main-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    object-fit: cover;
+}
+
+/* Strategies Section Images */
+.strategies-polaroid {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    background: white;
+    padding: 15px 15px 45px 15px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.strategies-polaroid img {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Why Section Images */
+.why-content-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    margin: 0 auto;
+}
+
+.why-content-image img {
+    width: 100%;
+    height: full;
+    min-height: 250px;
+    object-fit: cover;
+}
+
+.why-polaroid {
+    width: 100%;
+    max-width: 300px;
+    background: white;
+    padding: 15px 15px 45px 15px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transform: rotate(3deg);
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.why-polaroid img {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Testimonials Images */
+.testimonial-polaroid {
+    width: 100%;
+    max-width: 350px;
+    background: white;
+    padding: 15px 15px 45px 15px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    margin: 0 auto;
+}
+
+.testimonial-polaroid img {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
 /* Responsive Design */
+/* Responsive Design Improvements */
+@media (max-width: 1200px) {
+    .hero-image img {
+        max-width: 300px;
+        min-height: 400px;
+    }
+    
+    .services-image-container {
+        min-height: 250px;
+    }
+    
+    .portfolio-image-container {
+        min-height: 250px;
+    }
+    
+    .services-content {
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+    
+    .services-right {
+        gap: 1.2rem;
+    }
+    
+    .services-category {
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-image img {
+        max-width: 280px;
+        min-height: 350px;
+    }
+    
+    .about-polaroid img {
+        min-height: 300px;
+    }
+    
+    .services-image-container {
+        min-height: 200px;
+        transform: none;
+    }
+    
+    .portfolio-image-container {
+        min-height: 200px;
+    }
+    
+    .services-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .services-right {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .services-main-title {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -2167,9 +2341,12 @@ body {
     }
     
     .goals-new-image {
-        width: 250px;
-        height: 160px;
-        margin: 0 auto;
+        max-width: 250px;
+        min-height: 160px;
+    }
+    
+    .goals-new-image img {
+        min-height: 160px;
     }
     
     .goals-new-right {
@@ -2211,18 +2388,41 @@ body {
         padding: 0 1.5rem;
     }
     
+    .services-right {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
     .services-main-title {
         font-size: 3rem;
         text-align: center;
     }
     
+    .hero-image img {
+        max-width: 250px;
+        min-height: 300px;
+    }
+    
+    .about-polaroid img {
+        min-height: 250px;
+    }
+    
     .services-image-container {
-        height: 300px;
+        height: auto;
+        min-height: 200px;
         transform: none;
+    }
+    
+    .services-image-container img {
+        min-height: 200px;
     }
     
     .services-stats {
         justify-content: center;
+    }
+    
+    .services-category {
+        padding: 1.5rem;
     }
 
     .portfolio-new {
@@ -2252,12 +2452,17 @@ body {
     }
     
     .portfolio-slide {
-        flex: 0 0 250px;
+        flex: 0 0 200px;
     }
     
     .portfolio-image-container {
-        width: 250px;
-        height: 450px;
+        width: 200px;
+        height: auto;
+        min-height: 300px;
+    }
+    
+    .portfolio-image-container img {
+        min-height: 300px;
     }
     
     .portfolio-contact {
@@ -2329,8 +2534,12 @@ body {
     }
     
     .success-main-image {
-        width: 100%;
-        max-width: 350px;
+        max-width: 300px;
+        min-height: 200px;
+    }
+    
+    .success-main-image img {
+        min-height: 200px;
     }
     
     .success-contact {
@@ -2391,5 +2600,54 @@ body {
     
     .why-content-image {
         margin: 2rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image img {
+        max-width: 200px;
+        min-height: 250px;
+    }
+    
+    .about-polaroid img {
+        min-height: 200px;
+    }
+    
+    .services-image-container img {
+        min-height: 150px;
+    }
+    
+    .portfolio-image-container {
+        width: 150px;
+        min-height: 200px;
+    }
+    
+    .portfolio-image-container img {
+        min-height: 200px;
+    }
+    
+    .goals-new-image {
+        max-width: 200px;
+        min-height: 120px;
+    }
+    
+    .goals-new-image img {
+        min-height: 120px;
+    }
+    
+    .services-content {
+        padding: 0 1rem;
+    }
+    
+    .services-category {
+        padding: 1.2rem;
+    }
+    
+    .services-category-title {
+        font-size: 0.9rem;
+    }
+    
+    .services-list li {
+        font-size: 0.8rem;
     }
 }
